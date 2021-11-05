@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  users: any;
+  //oscuro: boolean = false;
+  filtro: string = '';
+
+  constructor(private httpClient: HttpClient) {
+    this.users = this.httpClient.get('https://raw.githubusercontent.com/AlumAlbertoPiedra/AplicacionResponsivaPersonalizada/master/src/app/home/MOCK_DATA.json')
+  }
+
+  actualizar(){
+    location.reload();
+  }
 
 }

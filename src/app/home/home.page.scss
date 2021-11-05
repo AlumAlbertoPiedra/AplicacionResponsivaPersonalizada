@@ -25,3 +25,40 @@
 #container a {
   text-decoration: none;
 }
+
+ion-content{
+  --ion-background-color: rgb(27, 27, 27);
+}
+
+ion-card-content:hover{
+
+  color:black;
+}
+
+.nombre:hover{
+  color: sandybrown;
+}
+
+ion-card{
+  --ion-background-color: white;
+}
+ion-card:hover{
+  --ion-background-color: rgb(78, 78, 78);
+}
+@media screen and (orientation:portrait) {
+  .boton{
+    display:block;
+  }
+}
+@media screen and (orientation:landscape) {
+  .boton{
+    display:none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .boton{
+    display:block;
+    --background: rgb(175, 33, 33);
+  }
+}
